@@ -1,0 +1,84 @@
+body {
+    text-align: center;
+    background-image: url("../img/bg.jpg");
+    width: auto;
+    background-position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.game-title{
+     padding-top: 60px;
+     padding-bottom: 30px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 900;
+     color:#2f5d62;
+     font-size: 400%;
+ }
+
+.grid-container {
+     display: inline-grid;
+     grid-template-columns: auto auto auto;
+     margin: 50px 50px 0px 50px;
+     border: 3px solid #2f5d62;
+     background-color: #fff
+}
+
+.grid-item {
+     background-color: rgba(255, 255, 255, 0.8);
+     border: 1px solid rgba(0, 0, 0, 0.8);
+     padding: 15px;
+     font-size: 30px;
+     text-align: center;
+     background-color:#fff
+}
+
+
+.bnt-field{
+
+    font-size: 50px;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border:0;
+    color:#2f5d62;
+}
+
+.bnt-field:disabled{
+    color: #2f5d62
+}
+
+.round-results{
+    padding : 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #7b113a
+}
+
+.btn-success{
+    background-color:#2f5d62 !important;
+
+}
+
+
+.btn-success:hover{
+    color:#28b5b5 }
+
+
+/* Footer Section */
+
+
+.social-icon {
+     margin: 20px 10px;
+
+}
+
+.white-section {
+     background-color: #c8c6a7;
+     margin-top:155px;
+     width: 100%}
+
+.footer-text{
+    padding-bottom: 30px}

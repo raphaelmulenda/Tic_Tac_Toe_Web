@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <!-- Bootstrap Scripts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- CSS Stylesheets -->
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,700;0,900;1,800&family=Playfair+Display:wght@400;800;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+<body>
+
+<h1 class="game-title">Tic Tac Toe</h1>
+<form action="{{ url_for('play_game')}}" method="post" enctype="multipart/form-data">
+    <div class="grid-container">
+        <div class="grid-item">
+            {% if board[0]== "" %}
+            <button class="bnt-field btn-light" type="submit" value="0" name="clicked-btn">{{board[0]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="0" name="clicked-btn" disabled>{{board[0]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[1]=="" %}
+            <button class="bnt-field " type="submit" value="1" name="clicked-btn">{{board[1]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="1" name="clicked-btn" disabled>{{board[1]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[2]== "" %}
+            <button class="bnt-field" type="submit" value="2" name="clicked-btn">{{board[2]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="2" name="clicked-btn" disabled>{{board[2]}}</button>
+            {% endif %}
+        </div>
+
+        <div class="grid-item">
+            {% if board[3]== "" %}
+            <button class="bnt-field" type="submit" value="3" name="clicked-btn">{{board[3]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="3" name="clicked-btn" disabled>{{board[3]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[4]== "" %}
+            <button class="bnt-field" type="submit" value="4" name="clicked-btn">{{board[4]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="4" name="clicked-btn" disabled>{{board[4]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[5]== "" %}
+            <button class="bnt-field" type="submit" value="5" name="clicked-btn">{{board[5]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="5" name="clicked-btn" disabled>{{board[5]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[6]== "" %}
+            <button class="bnt-field" type="submit" value="6" name="clicked-btn">{{board[6]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="6" name="clicked-btn" disabled>{{board[6]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[7]== "" %}
+            <button class="bnt-field" type="submit" value="7" name="clicked-btn">{{board[7]}}</button>
+            {% else %}
+             <button class="bnt-field" type="submit" value="7" name="clicked-btn" disabled>{{board[7]}}</button>
+            {% endif %}
+        </div>
+        <div class="grid-item">
+            {% if board[8]== "" %}
+            <button class="bnt-field" type="submit" value="8" name="clicked-btn">{{board[8]}}</button>
+            {% else %}
+            <button class="bnt-field" type="submit" value="8" name="clicked-btn" disabled>{{board[8]}}</button>
+            {% endif %}
+        </div>
+    </div>
+    <div class="round-results">
+        <p>{{ game_result }} </p>
+    </div>
+    <div class="reset-btn">
+        <button type="submit"  name="clicked-btn" value="reset" class="btn btn-success">Reset Game</button>
+    </div>
+</form>
+
+
+</body>
+
+
+<footer class="white-section" id="footer">
+    <div class="container-fluid">
+       <a href="https://twitter.com/Raphaelmulenda" ><i class="social-icon fab fa-twitter" ></i> </a>
+        <a href="https://www.linkedin.com/in/raphael-mulenda-53569342/"><i class="social-icon fab fa-linkedin"></i></a>
+        <p class="footer-text">Made with Love <i class="fas fa-heart"></i> by RFM</p>
+    </div>
+</footer>
+
+</html>
